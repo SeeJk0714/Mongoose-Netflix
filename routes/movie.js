@@ -28,7 +28,7 @@ router.get("/", async (req,res) => {
     /* better filtering method */
     if (genre || rating || release_year) {
       if (genre) {
-        filter.genre = genre; // { genre: genre }
+        filter.genre = { $in: genre}; // { genre: genre }
       }
       if (rating) {
         filter.rating = { $gt: rating }; // { rating: { $gt: rating } }

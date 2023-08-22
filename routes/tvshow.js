@@ -13,7 +13,7 @@ router.get("/", async (req,res) => {
         filter.premiere_year = { $gt: premiere_year }; 
       }
       if (genre) {
-        filter.genre = genre; 
+        filter.genre = { $in: genre.split(",") }; 
       }
       if (rating) {
         filter.rating = { $gt: rating }; 
