@@ -6,7 +6,7 @@ const movieSchema = new Schema({
         type: String,
         required: true,
     },
-    directer: {
+    director: {
         type: String,
         required: true,
     },

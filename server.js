@@ -4,6 +4,9 @@ const mongoose = require("mongoose");
 //create an instance o express
 const app = express();
 
+// middleware to handle JSON request
+app.use(express.json());
+
 //MongoDB connection
 mongoose
     .connect("mongodb://127.0.0.1:27017/netflix")
